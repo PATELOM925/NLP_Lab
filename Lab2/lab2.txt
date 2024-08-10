@@ -1,0 +1,122 @@
+#Stemming 
+https://www.geeksforgeeks.org/introduction-to-stemming/
+    -  is a process in natural language processing that reduces words to their base or root form. There are several types of stemming algorithms, each with different approaches and levels of complexity. Here are some common types of stemming:
+
+    1.	Porter Stemmer: http://snowball.tartarus.org/algorithms/porter/stemmer.html
+		Description: The Porter Stemmer is one of the most widely used stemming algorithms. 
+        It applies a series of rules to iteratively remove suffixes from words.
+		Example: “running” -> “run”, “runner” -> “runner”, “runs” -> “run”
+		Difference: It is designed to be simple and effective, focusing on common English suffixes.
+
+	2.	Lancaster Stemmer:
+		(also known as the Paice/Husk stemmer) is a more aggressive stemming algorithm compared to Porter. 
+        It uses a lookup table with rules to strip suffixes.
+		Example: “running” -> “run”, “runner” -> “run”, “runs” -> “run”
+		Difference: It is more aggressive and can sometimes over-stem, removing more of the word than necessary.
+
+	3.	Snowball Stemmer:
+		also known as the Porter2 stemmer, is an improved version of the Porter Stemmer. 
+        It provides a more comprehensive and less aggressive stemming process.
+		Example: “running” -> “run”, “runner” -> “runner”, “runs” -> “run”
+		Difference: It is more versatile and can be adapted to different languages, providing a balance between the simplicity of the Porter Stemmer and the aggressiveness of the Lancaster Stemmer.
+
+	4.	Lovins Stemmer:
+		is one of the oldest stemming algorithms. 
+        It uses a list of common suffixes and a lookup table to reduce words to their root forms.
+		Example: “running” -> “run”, “runner” -> “run”, “runs” -> “run”
+		Difference: It is less commonly used due to its complexity and the availability of more efficient algorithms like Porter and Snowball.
+    
+    5.  Dawson Stemmer :
+        It is an extension of Lovins stemmer in which suffixes are stored in the reversed order 
+        indexed by their length and last letter. 
+        Advantage: It is fast in execution and covers more suffices.
+        Limitation: It is very complex to implement.`
+    
+    6.  Krovetz Stemmer 
+        It was proposed in 1993 by Robert Krovetz. Following are the steps: 
+        1) Convert the plural form of a word to its singular form. 
+        2) Convert the past tense of a word to its present tense and remove the suffix ‘ing’. 
+        Example: ‘children’ -> ‘child’ 
+        Advantage: It is light in nature and can be used as pre-stemmer for other stemmers.
+        Limitation: It is inefficient in case of large documents.
+    
+    7.  Xerox Stemmer 
+        Capable of processing extensive datasets and generating valid words, it has a tendency to over-stem, 
+        primarily due to its reliance on lexicons, making it language-dependent. 
+        This constraint implies that its effectiveness is limited to specific languages.
+        Example: 
+        ‘children’ -> ‘child’
+        ‘understood’ -> ‘understand’
+        ‘whom’ -> ‘who’
+        ‘best’ -> ‘good’
+
+    8.  N-Gram Stemmer 
+        The algorithm, aptly named n-grams (typically n=2 or 3), 
+        involves breaking words into segments of length n and then applying statistical analysis to identify patterns.
+        An n-gram is a set of n consecutive characters extracted from a word in which similar words will have a high 
+        proportion of n-grams in common. 
+        Example: ‘INTRODUCTIONS’ for n=2 becomes : *I, IN, NT, TR, RO, OD, DU, UC, CT, TI, IO, ON, NS, S* 
+        Advantage: It is based on string comparisons and it is language dependent.
+        Limitation: It requires space to create and index the n-grams and it is not time efficient.
+    
+    9.  Regexp Stemmer
+        The Regexp Stemmer, or Regular Expression Stemmer, is a stemming algorithm that utilizes regular expressions 
+        to identify and remove suffixes from words. 
+        It allows users to define custom rules for stemming by specifying patterns to match and remove.
+        This method provides flexibility and control over the stemming process, 
+        making it suitable for specific applications where custom rule-based stemming is desired.
+
+
+    Differences:
+	Aggressiveness: Lancaster is the most aggressive, potentially over-stemming words, while Snowball and Porter are more moderate.
+	Simplicity vs. Complexity: Porter and Snowball are relatively simple and efficient, while Lovins is more complex.
+	Language Adaptability: Snowball is designed to be adaptable to different languages, making it more versatile than Porter and Lancaster, which are primarily for English.
+
+
+
+
+#StopWords
+https://www.geeksforgeeks.org/nlp-training-a-tokenizer-and-filtering-stopwords-in-a-sentence/
+
+
+
+
+# Lemmatization 
+https://www.geeksforgeeks.org/python-lemmatization-with-nltk/
+    Lemmatization is the process of grouping together the different inflected 
+    forms of a word so they can be analyzed as a single item. Lemmatization is similar to 
+    stemming but it brings context to the words. So, it links words with similar meanings to one word
+
+
+
+
+#Part of Speech Tagging - 
+https://www.geeksforgeeks.org/nlp-part-of-speech-default-tagging/
+    Part of Speech (POS) tagging refers to assigning each word of a sentence to its part of speech. 
+    It is significant as it helps to give a better syntactic overview of a sentence. 
+    - basic pos tags: 
+    Noun (N): Refers to names of people, places, and things.
+    Verb (V): Includes action words, linking verbs, and helping verbs.
+    Adjective (ADJ): Describes or modifies nouns or pronouns.
+    Adverb (ADV): Modifies verbs, adjectives, or other adverbs.
+    Pronoun (PRON): Replaces nouns in a sentence.
+
+
+
+
+# NER - 
+https://www.geeksforgeeks.org/named-entity-recognition/
+    What is Named Entity Recognition (NER)?
+    Name-entity recognition (NER) is also referred to as entity identification, entity chunking,
+    and entity extraction. NER is the component of information extraction that aims to identify 
+    and categorize named entities within unstructured text. NER involves the identification of key 
+    information in the text and classification into a set of predefined categories. 
+    An entity is the thing that is consistently talked about or refer to in the text, 
+    such as person names, organizations, locations, time expressions, quantities, percentages
+    and more predefined categories.
+
+    NER plays an important role in enhancing the precision of other NLP tasks like part-of-speech tagging and parsing. 
+    At its core, NLP is just a two-step process, below are the two steps that are involved:
+        - Detecting the entities from the text
+        - Classifying them into different categories
+
