@@ -1,0 +1,10 @@
+#lab3
+https://spacy.io
+https://spacy.io/usage/linguistic-features
+https://spacy.io/models/en
+
+
+#lab3.1
+https://towardsdatascience.com/hidden-markov-models-explained-with-a-real-life-example-and-python-code-2df2a7956d65
+https://www.geeksforgeeks.org/viterbi-algorithm-for-hidden-markov-models-hmms/
+https://pieriantraining.com/viterbi-algorithm-implementation-in-python-a-practical-guide/
