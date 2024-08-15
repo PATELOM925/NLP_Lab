@@ -1,0 +1,6 @@
+https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html
+https://www.turing.com/kb/guide-on-word-embeddings-in-nlp
+https://www.geeksforgeeks.org/word-embeddings-in-nlp/
+
+https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html
+https://www.geeksforgeeks.org/ml-one-hot-encoding/
